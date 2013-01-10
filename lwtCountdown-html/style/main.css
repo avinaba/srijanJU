@@ -61,8 +61,10 @@ h2.subtitle {
 	display: block;
 	bottom: 0px;
 	right: 6px;
+	font-family: 'Shadows Into Light', cursive;
 	font-size: 9pt;
-	color: #555;
+	/*color: #555;*/
+	color:white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
