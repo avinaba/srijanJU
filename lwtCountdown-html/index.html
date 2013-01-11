@@ -4,19 +4,51 @@
 <head>
 	<script language="Javascript" type="text/javascript" src="js/jquery-1.4.1.js"></script>
 	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
-	<script language="Javascript" type="text/javascript" src="js/misc.js"></script>
+	<!--<script language="Javascript" type="text/javascript" src="js/misc.js"></script>-->
 	<link rel="Stylesheet" type="text/css" href="style/main.css"></link>
 	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shadows+Into+Light' rel='stylesheet' type='text/css'>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+	<link rel="stylesheet" href="style/style.css">
 	<title>test</title>
 </head>
 
-<body background="images/bg.jpg">
- 
-	<div id="container">
+<body background="images/bg.jpg"><!--<script type="text/javascript" src="http://ui.sidepage.co/3/ui.prod.old.js"></script>-->
+<div id="logo"></div>
+ <section class="demo">
 
+        <dl class="list nigiri">
+            <dt>EVENTS LIST</dt>
+            <dd><a href="#">Maguro</a></dd>
+            <dd><a href="#">Sake</a></dd>
+            <dd><a href="#">Unagi</a></dd>
+            <dd><a href="#">Buri</a></dd>
+            <dd><a href="#">Suzuki</a></dd>
+            <dd><a href="#">Saba</a></dd>
+            <dd><a href="#">Iwashi</a></dd>
+            <dd><a href="#">Kohada</a></dd>
+            <dd><a href="#">Hirame</a></dd>
+            <dd><a href="#">Tobiwo</a></dd>
+        </dl>
+		
+		</section>
+	<div id="container">
+			<!--<div class="gear" id="gear1"></div>
+            <div class="gear" id="gear2"></div>
+            <div class="gear" id="gear3"></div>
+            <div class="gear" id="gear4"></div>
+            <div class="gear" id="gear5"></div>
+            <div class="gear" id="gear6"></div>
+            <div class="gear" id="gear7"></div>-->
+			<div class="gear" id="gear8"></div>
+            <div class="gear" id="gear9"></div>
+            <div class="gear" id="gear10"></div>
+            <div class="gear" id="gear11"></div>
+            <div class="gear" id="gear12"></div>
+            <div class="gear" id="gear13"></div>
+			<div class="gear" id="gear14"></div>
+			<div class="gear" id="gear15"></div>
+			<div class="gear" id="gear16"></div>
 		<h1>UNDER CONSTRUCTION</h1>
 		<h2 class="subtitle">Stay tuned for news and updates.</h2>
 
@@ -56,15 +88,63 @@
 		<!-- Countdown dashboard end -->
 
 		<div class="dev_comment">
-			It's gonna be legen- . . . . . . .   wait for it. . . .
+			It's gonna be legen- . . . . . . .   -wait for it-. . . . -dary!!!!
 		</div>
 
 		<div class="subscribe">
 			<form action="" method="POST" id="subscribe_form">
-				<input type="text" name="email" id="email_field" class="faded" value="your@email.com" /> <input type="submit" id="subscribe_button" value="Stay updated" />
+				<input type="text" name="email" id="email_field" onclick="setStyle(this.id)" class="faded" value="your@email.com" /> <input type="submit" id="subscribe_button" value="Stay updated" />
 			</form>
 		</div>
+		<!--<script src="js/jquery.min.js"></script>-->
+    <script src="js/drop.js"></script>
+    <script>
 
+        // The `enabled` flag will be `false` if CSS 3D isn't available
+
+        if ( $.fn.makisu.enabled ) {
+
+            var $nigiri = $( '.nigiri' );
+            
+
+            // Create Makisus
+
+            $nigiri.makisu({
+                selector: 'dd',
+                overlap: 0.85,
+                speed: 1.7
+            });
+
+            
+
+            // Open all
+            
+            $( '.list' ).makisu( 'open' );
+
+            // Toggle on click
+
+           /* $( '.toggle' ).on( 'click', function() {
+                $( '.list' ).makisu( 'toggle' );
+            });*/
+
+            // Disable all links
+
+            /*$( '.demo a' ).click( function( event ) {
+                event.preventDefault();
+            });*/
+
+        } else {
+
+            $( '.warning' ).show();
+        }
+
+    </script>
+<script>
+function setStyle(x)
+{
+document.getElementById(x).style.opacity=1;
+}
+</script>
 		<script language="javascript" type="text/javascript">
 			jQuery(document).ready(function() {
 				$('#countdown_dashboard').countDown({
