@@ -1,0 +1,450 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!--<script language="Javascript" type="text/javascript" src="js/misc.js"></script>-->
+	<link rel="Stylesheet" type="text/css" href="style/main.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/demo.css" />
+	<link rel="stylesheet" type="text/css" href="style/custom.css" />
+	<link rel="stylesheet" type="text/css" href="style/event.css" />
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	<script src="js/rotate.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style/slicebox.css" />
+	<title>test</title>
+	
+</head>
+
+<body><!--<script type="text/javascript" src="http://ui.sidepage.co/3/ui.prod.old.js"></script>-->
+<!--<div id="logo"></div>-->
+<!--big gear-->
+<div id="content">
+	<div class="pic">
+	</div>
+	<div id="content_info">Welcome to our b-plan page.. Click on the event to view information about it.</div>
+</div>
+<!--sub event gears-->
+<div id="container">
+			
+			<div id="iContradict">
+				<div class="gear" id="gear19" ></div>
+				<div id="iContradict_info" onclick="iContra()">i-contradict</div>
+			</div>
+			<div id="pPresentation">
+				<div class="gear" id="gear20"></div>
+				<div id="pPresentation_info" onclick="pPres()">paper presentation</div>
+			</div>
+			<div id="tLogo">
+				<div class="gear" id="gear21"></div>
+				<div id="tLogo_info" onclick="tTag()">tagline/logo</div>
+			</div>
+            <div id="back">
+				<div class="gear" id="gear18"></div>
+				<div id="back_info" onclick="Back()">back</div>
+			</div>
+			<div id="home">
+				<div class="gear" id="gear17"></div>
+				<div id="home_info" onclick="Home()">home</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+	var option = 0;
+	
+	function Home()
+	{
+		document.getElementById("content_info").innerHTML = "Do check out our other events!";
+		setTimeout( function(){ window.location = "index.html"; }, 2000 );
+		if( option == 1)
+		{
+			jQuery("#home").animate( {top:"-=50px",},1500);		
+		}
+		if( option == 2)
+		{
+			jQuery("#iContradict").animate( {top:"-=30px",},1500);
+		}
+		else if( option == 3)
+		{
+			jQuery("#pPresentation").animate( {top:"-=30px",left:"+=30px"},1500);
+		}
+		else if( option == 4)
+		{
+			jQuery("#tLogo").animate( {left:"+=38px",},1500);
+		}
+		else if( option == 5)
+		{
+			jQuery("#back").animate( {left:"+=40px",},1500);
+		}
+		jQuery("#home").animate({ top : "+=50px",},1500);
+		option = 1;
+		jQuery(".pic").stopRotate();
+		jQuery("#gear17").stopRotate();
+		jQuery("#gear19").stopRotate();
+		jQuery("#gear20").stopRotate();
+		jQuery("#gear21").stopRotate();
+		jQuery("#gear18").stopRotate();
+		
+		var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 
+	 var rotationHome = function(){
+	 jQuery('#gear17').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotationHome,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 rotationHome();
+	 rotation1();
+	}
+	
+	function iContra()
+	{
+		document.getElementById("content_info").innerHTML = "i contradict event details!!";
+		if( option == 1)
+		{
+			jQuery("#home").animate( {top:"-=50px",},1500);
+		}
+		if( option == 2)
+		{
+			jQuery("#iContradict").animate( {top:"-=30px",},1500);
+		}
+		else if( option == 3)
+		{
+			jQuery("#pPresentation").animate( {top:"-=30px",left:"+=30px"},1500);
+		}
+		else if( option == 4)
+		{
+			jQuery("#tLogo").animate( {left:"+=38px",},1500);
+		}
+		else if( option == 5)
+		{
+			jQuery("#back").animate( {left:"+=40px",},1500);
+		}
+		jQuery("#iContradict").animate({ top : "+=30px",},1500);
+		option = 2;
+		jQuery(".pic").stopRotate();
+		jQuery("#gear17").stopRotate();
+		jQuery("#gear19").stopRotate();
+		jQuery("#gear20").stopRotate();
+		jQuery("#gear21").stopRotate();
+		jQuery("#gear18").stopRotate();
+		
+		var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 
+	 var rotationRW = function(){
+	 jQuery('#gear19').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotationRW,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 rotationRW();
+	 rotation1();
+	}
+	
+	function pPres()
+	{
+		document.getElementById("content_info").innerHTML = "present your paper!";
+		if( option == 1)
+		{
+			jQuery("#home").animate( {top:"-=50px",},1500);
+		}
+		if( option == 2)
+		{
+			jQuery("#iContradict").animate( {top:"-=30px",},1500);
+		}
+		else if( option == 3)
+		{
+			jQuery("#pPresentation").animate( {top:"-=30px",left:"+=30px"},1500);
+		}
+		else if( option == 4)
+		{
+			jQuery("#tLogo").animate( {left:"+=38px",},1500);
+		}
+		else if( option == 5)
+		{
+			jQuery("#back").animate( {left:"+=40px",},1500);
+		}
+		jQuery("#pPresentation").animate( {top:"+=30px",left:"-=30px"},1500);
+		option = 3;
+		jQuery(".pic").stopRotate();
+		jQuery("#gear17").stopRotate();
+		jQuery("#gear19").stopRotate();
+		jQuery("#gear20").stopRotate();
+		jQuery("#gear21").stopRotate();
+		jQuery("#gear18").stopRotate();
+		
+		var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 
+	 var rotationRK = function(){
+	 jQuery('#gear20').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotationRK,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 rotationRK();
+	 rotation1();
+	}
+	
+	function tTag()
+	{
+		document.getElementById("content_info").innerHTML = "tagline/logo details!";
+		if( option == 1)
+		{
+			jQuery("#home").animate( {top:"-=50px",},1500);
+		}
+		if( option == 2)
+		{
+			jQuery("#iContradict").animate( {top:"-=30px",},1500);
+		}
+		else if( option == 3)
+		{
+			jQuery("#pPresentation").animate( {top:"-=30px",left:"+=30px"},1500);
+		}
+		else if( option == 4)
+		{
+			jQuery("#tLogo").animate( {left:"+=38px",},1500);
+		}
+		else if( option == 5)
+		{
+			jQuery("#back").animate( {left:"+=40px",},1500);
+		}
+		jQuery("#tLogo").animate({ left : "-=38px",},1500);
+		option = 4;
+		
+		jQuery(".pic").stopRotate();
+		jQuery("#gear17").stopRotate();
+		jQuery("#gear19").stopRotate();
+		jQuery("#gear20").stopRotate();
+		jQuery("#gear21").stopRotate();
+		jQuery("#gear18").stopRotate();
+		
+		var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 
+	 var rotationKR = function(){
+	 jQuery('#gear21').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotationKR,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 rotationKR();
+	 rotation1();
+	}
+	
+	function Back()
+	{
+		document.getElementById("content_info").innerHTML = "You must have heard cassettes take long time to rewind! so bear with us! :)";
+		setTimeout( function(){ window.location = "index.html"; }, 2000 );
+		if( option == 1)
+		{
+			jQuery("#home").animate( {top:"-=50px",},1500);
+		}
+		if( option == 2)
+		{
+			jQuery("#iContradict").animate( {top:"-=30px",},1500);
+		}
+		else if( option == 3)
+		{
+			jQuery("#pPresentation").animate( {top:"-=30px",left:"+=30px"},1500);
+		}
+		else if( option == 4)
+		{
+			jQuery("#tLogo").animate( {left:"+=38px",},1500);
+		}
+		else if( option == 5)
+		{
+			jQuery("#back").animate( {left:"+=40px",},1500);
+		}
+		jQuery("#back").animate({ left : "-=40px",},1500);
+		option = 5;
+		jQuery(".pic").stopRotate();
+		jQuery("#gear17").stopRotate();
+		jQuery("#gear19").stopRotate();
+		jQuery("#gear20").stopRotate();
+		jQuery("#gear21").stopRotate();
+		jQuery("#gear18").stopRotate();
+		
+		var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 
+	 var rotationBack = function(){
+	 jQuery('#gear18').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotationBack,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 rotationBack();
+	 rotation1();
+	}
+	
+	
+</script>
+
+<!--javascript for rotating the big gear-->
+<script>
+	jQuery(document).ready(function() {
+	
+	/*rotate big circle
+								
+	var rotation1 = function (){
+    jQuery('.pic').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:360, 
+      duration: 6000,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation1,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+     });
+	 }
+	 */
+	 
+	 /*rotate small circle
+	 var rotation = function(){
+	 jQuery('#gear18').rotate({
+      angle:0,            // reset rotation angle to 0 where to start the rotation
+      // rotate 360 degrees (counter clockwise), in 3 secconds
+      animateTo:-360, 
+      duration: 2200,
+      // auto-call the function after rotation, to rotate again and again
+      callback: rotation,
+      // add easing to make animation look more natural
+      // t: current time, b: begInnIng value, c: change In value, d: duration
+      easing: function (x,t,b,c,d){
+        return c*(t/d)+b;       // linear easing
+      },
+	  
+     });
+	 }
+	 */  
+});
+</script>
+<div id="copyright">best viewed in chrome<br>developed by arnaj  ,  avinaba  ,  pratyay  ,  sailik</br>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+#console
+{
+	position:absolute;
+	width:754px;
+	height:567px;
+	left:77px;
+	top:75px;
+	background:url('../images/SrijanJU_siteart_eventpages_Coding_v2_754X566.png');
+	/*border : solid black;*/
+}
+#homec
+{
+	position:absolute;
+	width:25px;
+	height:25px;
+	left:10px;
+	top:7px;
+	color : red;
+	border-radius:50%;
+	border: solid white;
+	cursor : pointer;
+}
+#codex
+{
+	position:relative;
+	width:70px;
+	height:20px;
+	left:270px;
+	top:118px;
+	color : white;
+	cursor : pointer;
+	/*border : solid black;*/
+}
+#xbug
+{
+	position:relative;
+	width:70px;
+	height:20px;
+	left:267px;
+	top:118px;
+	color : white;
+	cursor : pointer;
+	/*border : solid black;*/
+}
+#treasure_hunt
+{
+	position:relative;
+	width:70px;
+	height:20px;
+	left:272px;
+	top:117px;
+	color : white;
+	cursor : pointer;
+}
+::-webkit-input-placeholder{
+	color : green;
+	}
+:-moz-placeholder{
+	color : red;
+}
+::moz-placeholder{
+	color : red;
+}
+:-ms-input-placeholder{
+	color : red;
+}
+#typebox
+{
+	position:relative;
+	width:160px;
+	height:25px;
+	left:310px;
+	top:134px;
+	color : white;
+	cursor : pointer;
+	/*border :solid black;*/
+}
+#event_info
+{
+	position:relative;
+	width:720px;
+	height:310px;
+	left:17px;
+	top:145px;
+	color : white;
+	font-size: 1.0em;
+	font-style:Callibri;
+	text-align:left;
+	cursor : pointer;
+	/*border :solid black;*/
+}

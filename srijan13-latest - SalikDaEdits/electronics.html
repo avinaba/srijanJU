@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!--<script language="Javascript" type="text/javascript" src="js/misc.js"></script>-->
+	<link rel="Stylesheet" type="text/css" href="style/main.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/demo.css" />
+	<link rel="stylesheet" type="text/css" href="style/custom.css" />
+	<link rel="stylesheet" type="text/css" href="style/event.css" />
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	<script src="js/rotate.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="style/electronics.css" />
+	<title>game_test</title>
+	
+</head>
+
+<body><!--<script type="text/javascript" src="http://ui.sidepage.co/3/ui.prod.old.js"></script>-->
+
+<div id="console">
+	<div id="picE"></div>
+	<div id="event_info"></div>
+	<div id="actual_info">
+		This is our electronic's even page! <br/>
+		Exercise on the right parts of you brain<br/>
+		and register for the events you like!<br/>
+	</div>
+	<div id="homeE" onclick="HomeE()">home</div>
+	<div id="backE" onclick="BackE()">back</div>
+	<div id="es" onclick="Es()">embedded system</div>
+	<div id="electron" onclick="elec()">electron</div>
+	<div id="blib1"></div>
+	<div id="blib2"></div>
+	<div id="blib3"></div>
+	<div id="blib4"></div>
+	<div id="blib5"></div>
+</div>
+<script>
+
+	function HomeE(){
+		document.getElementById("actual_info").innerHTML = "Do check our other events!";
+		jQuery("#homeE").animate( {top : "+=1px",}, 500);
+		jQuery("#homeE").animate( {top : "-=1px",}, 500);
+		setTimeout( function(){ window.location = "index.html"; }, 1500 );
+	}
+	function BackE(){
+		document.getElementById("actual_info").innerHTML = "going back!";
+		jQuery("#backE").animate( {top : "+=1px",}, 500);
+		jQuery("#backE").animate( {top : "-=1px",}, 500);
+		//setTimeout( function(){ window.location = "main.html"; }, 1500 );
+	}
+	function Es(){
+		document.getElementById("actual_info").innerHTML = "Embedded System event info";
+		jQuery("#es").animate( {top : "+=1px",}, 500);
+		jQuery("#es").animate( {top : "-=1px",}, 500);
+		//$('#event_info').css({"background":"url('../images/7.jpg')"});
+	}
+	function elec(){
+		document.getElementById("actual_info").innerHTML = "Electron event info";
+		jQuery("#electron").animate( {top : "+=1px",}, 500);
+		jQuery("#electron").animate( {top : "-=1px",}, 500);
+		//$('#event_info').css({"background":"url('../images/6.jpg')"});
+	}
+</script>
+
+<div id="copyright">best viewed in chrome<br>developed by arnaj  ,  avinaba  ,  pratyay  ,  sailik</br></div>
+</body>
+
+</html>

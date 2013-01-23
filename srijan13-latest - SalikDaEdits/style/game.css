@@ -1,0 +1,129 @@
+#console
+{
+	position:absolute;
+	width:802px;
+	height:737px;
+	left:120px;
+	top:75px;
+	background:url('../images/SrijanJU_siteart_eventpages_Gaming.png');
+	overflow:show;
+	/*border : solid black;*/
+}
+#game_info
+{
+	position:relative;
+	width:525px;
+	height:286px;
+	left:142px;
+	top:45px;
+	color : black;
+	padding-top:20px;
+	font-size:1.5em;
+	border: solid black;
+	background-image:url('../images/1_1.jpg');
+	opacity : 0.8;
+	
+}
+#nfs
+{
+	position : relative;
+	width: 51px;
+	height : 25px; 
+	left:66.25%;
+	top:138px;
+	text-transform:uppercase;
+	color:black;
+	padding-top:0px;
+	border:solid blue;
+	background-color : blue;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}
+#fifa
+{
+	position : relative;
+	width: 51px;
+	height : 25px; 
+	left:73.25%;
+	top:94px;
+	text-transform:uppercase;
+	color:black;
+	padding-top:0px;
+	border:solid yellow;
+	background-color : yellow;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}
+
+#sf
+{
+	position : relative;
+	width: 51px;
+	height : 25px; 
+	left:73.75%;
+	top:87px;
+	text-transform:uppercase;
+	color:black;
+	padding-top:0px;
+	border:solid green;
+	background-color : green;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}
+#cs
+{
+	position : relative;
+	width: 51px;
+	height : 25px; 
+	left:80%;
+	top:89px;
+	text-transform:uppercase;
+	color:black;
+	padding-top:0px;
+	border:solid red;
+	background-color : red;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}
+#homeg
+{
+	position : relative;
+	width: 76px;
+	height : 33px; 
+	left:58%;
+	top:50px;
+	text-transform:uppercase;
+	color:red;
+	padding-toqp:3px;
+	border:solid black;
+	background-color : black;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}
+#backg
+{
+	position : relative;
+	width: 78px;
+	height : 34px; 
+	left:32%;
+	top:82px;
+	text-transform:uppercase;
+	color:red;
+	padding-top:3px;
+	border:solid black;
+	background-color : black;
+	font-size:1.4em;
+	cursor:pointer;
+	border-radius:50%;
+	cursor : pointer;
+}

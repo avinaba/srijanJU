@@ -1,0 +1,120 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!--<script language="Javascript" type="text/javascript" src="js/misc.js"></script>-->
+	<link rel="Stylesheet" type="text/css" href="style/main.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/demo.css" />
+	<link rel="stylesheet" type="text/css" href="style/custom.css" />
+	<link rel="stylesheet" type="text/css" href="style/event.css" />
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	<script src="js/rotate.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="style/coding.css" />
+	<title>game_test</title>
+	
+</head>
+
+<body><!--<script type="text/javascript" src="http://ui.sidepage.co/3/ui.prod.old.js"></script>-->
+
+<div id="console">
+	<div id="homec" onclick="HomeC()"></div>
+	<div id="codex" onclick="Codex()">codex.event</div>
+	<div id="xbug" onclick="Bugx()">xbug.event</div>
+	<div id="treasure_hunt" onclick="Th()">treasure_hunt.event</div>
+	<div id="typebox">
+		<input id="command" onkeypress="getEvent(event)" placeholder="enter  ' view <filename> '">
+	</div>
+	<div id="event_info">Welcome all coders!<br/>
+	 We have provided you two options for viewing the information on the events listed above.<br/>
+	 <br/>
+	 1. You could use the 'view' command in the text box provided on the mock-terminal.<br/>
+	 2. You could click on the '.event' name.<br/>
+	 <br/>
+	 We coders knows which one to choose, don't we?
+	</div>
+</div>
+
+<script>
+	option=0;
+	function getEvent(e)
+	{
+		if(e.keyCode == 13){
+			var tb = document.getElementById("command");
+			var str=tb.value;
+			if(str==="view codex.event")
+				Codex();
+			else if(str==="view xbug.event")
+				Bugx();
+			else if(str==="view treasure_hunt.event")
+				Th();
+			else if(str==="back")
+				window.location = "index.html";
+			else
+				Fault();
+		}
+	}
+	function Fault()
+	{
+		document.getElementById("event_info").innerHTML = "Well this not exactly a terminal you know. Its a mock-terminal.<br/> Anyway, if you haven't noticed, this page lacks a 'back' button. Need I say more? Enjoy!";
+	}
+	function Codex(){
+		document.getElementById("event_info").innerHTML = "This event is straight forward coding event with the following specifications :<br/><br/>1. Languages : C/C++/JAVA<br/>2. Two rounds : Qualifications and Finals.<br/>3. Each team can have a minimum of 2 and a maximum of 3 members.<br/>4. Each team will be given a GNU-Linux terminal for coding and compination in the final round.<br/>5. All the rounds will be on-site events.";
+		if(option==1){
+			jQuery("#codex").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==2){
+			jQuery("#xbug").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==3){
+			jQuery("#treasure_hunt").animate( {left : "-=87px",}, 870);
+		}
+		jQuery("#codex").animate( {left : "+=126px",}, 1260);
+		option=1;
+	}
+	function Bugx(){
+		document.getElementById("event_info").innerHTML = "This event is a debugging event :<br/><br/>1. Language : C<br/>2. Two rounds : Qualifications and Finals.<br/>3. Each team can have a minimum of 2 and a maximum of 3 members.<br/>4. Each team will be given a set of question in both the rounds.<br/>5. All the rounds will be on-site events.";
+		if(option==1){
+			jQuery("#codex").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==2){
+			jQuery("#xbug").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==3){
+			jQuery("#treasure_hunt").animate( {left : "-=87px",}, 870);
+		}
+		jQuery("#xbug").animate( {left : "+=126px",}, 1260);
+		option=2;
+	}
+	function Th(){
+		document.getElementById("event_info").innerHTML = "Treasure Hunt event info.";
+		if(option==1){
+			jQuery("#codex").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==2){
+			jQuery("#xbug").animate( {left : "-=126px",}, 1260);
+		}
+		else if(option==3){
+			jQuery("#treasure_hunt").animate( {left : "-=87px",}, 870);
+		}
+		jQuery("#treasure_hunt").animate( {left : "+=87px",}, 870);
+		option=3;
+	}
+	function HomeC(){
+		document.getElementById("event_info").innerHTML = "Do check our other events";
+		jQuery("#homeg").animate( {top : "+=2.5px",}, 500);
+		jQuery("#homeg").animate( {top : "-=2.5px",}, 500);
+		setTimeout( function(){ window.location = "index.html"; }, 1500 );
+	}
+	
+</script>
+
+<div id="copyright">best viewed in chrome<br>developed by arnaj  ,  avinaba  ,  pratyay  ,  sailik</br></div>
+</body>
+
+</html>

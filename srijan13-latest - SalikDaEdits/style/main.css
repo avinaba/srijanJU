@@ -1,0 +1,427 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+#ad
+{
+	position:absolute;
+	width:230px;
+	height:370px;
+	background:white;
+	right:30px;
+	top:200px;
+	border:dashed black;
+}
+body {
+	text-align: center;
+	background: url(../images/bg.jpg);
+	/*oveflow-y:scroll;*/
+	width:100%;
+	height:100%;
+}
+
+h1 {
+	font-size: 28pt;
+	letter-spacing: 12px;
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	font-family: 'Akronim', cursive;
+	color:white;
+}
+
+h2.subtitle {
+	margin-top: 0px;
+	margin-bottom: 40px;
+	font-family: 'Shadows Into Light', cursive;
+	color:white;
+}
+
+#container {
+	margin: 100px auto;
+	width: 700px;
+	color: #555;
+}
+
+#countdown_dashboard {
+	height: 110px;
+	overflow:hidden;
+}
+
+.dash {
+	width: 110px;
+	height: 114px;
+	background: transparent url('../images/dash.png') 0 0 no-repeat;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+	
+}
+
+.dash .digit {
+	font-size: 55pt;
+	font-weight: bold;
+	float: left;
+	width: 55px;
+	text-align: center;
+	/*font-family: Times;*/
+	font-family: 'Fredericka the Great', cursive;
+	color: #555;
+	position: relative;
+}
+
+.dash_title {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	right: 6px;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 9pt;
+	/*color: #555;*/
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.dev_comment {
+	font-size: 14pt;
+	/*color: #777;*/
+	color:white;
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+	font-style: italic;
+	margin: 40px 10px;
+}
+#hack
+{
+	position:absolute;
+	width:625px;
+	height:100px;
+	/*background:url('../images/HackTrack_logov0.png') no-repeat 0 0;*/
+	left:350px;
+	top:540px;
+	background:yellow;
+	-moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+	
+	 -moz-animation-name: blink;
+    -moz-animation-duration: 3s;
+
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 3s;
+	box-shadow:0px 0px 40px red;
+}
+@-webkit-keyframes blink {
+	0%{
+		opacity:0.1;
+		}
+    5% {
+        opacity:0.1;
+    }
+	50%{opacity:1;}
+    100% {
+        opacity:0.1;
+    }
+}
+@-moz-keyframes blink {
+	0%{
+		opacity:0.1;
+		}
+    5% {
+		opacity:0.1;
+    }
+	50%{opacity:1;}
+    100% {
+       opacity:0.1;
+    }
+}
+/*#hackinfo{
+	position:absolute;
+	background:white;
+	opacity:0;
+	width:625px;
+	height:200px;
+	top:350px;
+	left:350px;
+}
+#hack:hover + #hackinfo{
+	opacity:1;
+	-webkit-transition:1s all ease-in-out;
+	-webkit-transform:scaleY(2)
+}
+#hack:hover + #hackinfo{
+top:150px;}*/
+#subscribe_form {
+	position: absolute;
+	bottom:30px;
+	left:400px;
+} 
+
+#email_field {
+	font-size: 16pt;
+	padding: 6px 10px;
+	width: 300px;
+	border-style:groove;
+	bottom:0px;
+	opacity:0.3;
+}
+/*#email_field:hover{
+opacity:1;
+-webkit-transition:1s all ease-in-out; ;
+}*/
+#email_field:onfocus{
+opacity:1;
+-webkit-transition:1s all ease-in-out;
+}
+
+#subscribe_button {
+	font-size: 14pt;
+	color: #333;
+	padding: 4px 8px;
+}
+
+.copyright {
+	font-size: 9pt;
+	color: #333;
+	margin: 40px 0px;
+}
+
+.faded {
+	color: #999;
+}
+
+.form_message {
+	width: 400px;
+	padding: 10px;
+	margin: 15px auto;
+	display: none;
+}
+
+#error_message {
+	background-color: #ffe;
+	border-left: 5px solid #bb3;
+	border-right: 5px solid #bb3;
+	color: #770;
+}
+
+#info_message {
+	background-color: #f0f9ff;
+	border: 1px solid #eef;
+}
+
+#loading {
+	text-align: center;
+	margin: 10px;
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 60px;
+}
+/* CSS3 keyframes */
+@-webkit-keyframes ckw {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes ckw {
+    0% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes cckw {
+    0% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+}
+@-moz-keyframes cckw {
+    0% {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+}
+/* gears */
+.gear {
+    float: none;
+    position: absolute;
+    text-align: center;
+
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+}
+#gear9 {
+    background: url('../images/g2_2.png') no-repeat 0 0;
+    height: 125px;
+    left: 965px;
+    top: 175px;
+    width: 125px;
+   /* 
+    -moz-animation-name: cckw;
+    -moz-animation-duration: 16.84s;
+
+    -webkit-animation-name: cckw;
+    -webkit-animation-duration: 16.84s;
+*/
+}
+/*#gear10 {
+    background: url('../images/g3_2.png') no-repeat 0 0;
+    height: 103px;
+    left: 1105px;
+    top: 158px;
+    width: 103px;
+    
+    -moz-animation-name: ckw;
+    -moz-animation-duration: 13.5s;
+
+    -webkit-animation-name: ckw;
+    -webkit-animation-duration: 13.5s;
+}*/
+#gear11 {
+    background: url('../images/g4_2.png') no-repeat 0 0;
+    height: 144px;
+    left:950px;
+    top:43px;
+    width: 144px;
+    /*
+    -moz-animation-name: fly;
+    -moz-animation-duration: 2s;
+
+    -webkit-animation-name: fly;
+    -webkit-animation-duration: 2s;
+	*/
+}
+#gear12 {
+    background: url('../images/g1_2.png') no-repeat 0 0;
+    height: 85px;
+    left:2px;
+    top: 33px;
+    width: 85px;
+    
+    -moz-animation-name: cckw;
+    -moz-animation-duration: 10s;
+
+    -webkit-animation-name: cckw;
+    -webkit-animation-duration: 10s;
+}
+/*#gear13 {
+    background: url('../images/g2_2.png') no-repeat 0 0;
+    height: 125px;
+    left: 1135px;
+    top: 353px;
+    width: 125px;
+    
+    -moz-animation-name: cckw;
+    -moz-animation-duration: 16.84s;
+
+    -webkit-animation-name: cckw;
+    -webkit-animation-duration: 16.84s;
+}
+#gear14 {
+    background: url('../images/g3_2.png') no-repeat 0 0;
+    height: 103px;
+    left: 1045px;
+    top: 327px;
+    width: 103px;
+    
+    -moz-animation-name: ckw;
+    -moz-animation-duration: 13.5s;
+
+    -webkit-animation-name: ckw;
+    -webkit-animation-duration: 13.5s;
+}*/
+#gear15 {
+    background: url('../images/g3_2.png') no-repeat 0 0;
+    height: 103px;
+    left: 854px;
+    top: 48px;
+    width: 103px;
+/*    
+    -moz-animation-name: cckw;
+    -moz-animation-duration: 13.5s;
+
+    -webkit-animation-name: cckw;
+    -webkit-animation-duration: 13.5s;
+*/
+	}
+#gear16 {
+    background: url('../images/g1_2.png') no-repeat 0 0;
+    height: 85px;
+    left: 1px;
+    top: 108px;
+    width: 85px;
+    
+    -moz-animation-name: ckw;
+    -moz-animation-duration: 10s;
+
+    -webkit-animation-name: ckw;
+    -webkit-animation-duration: 10s;
+}
+#arrow
+{
+	box-radius:50px;
+	width:100px;
+	height:100px;
+	top:440px;
+	left:350px;
+}
+#logo
+{
+	background: url('../images/SrijanJU_logo_v1_140px.png') no-repeat 0 0;
+	position:absolute;
+	right:20px;
+	top:0px;
+	z-index:10;
+	width:140px;
+	height:140px;
+	overflow:show;
+}
+#copyright
+{
+	position:fixed;
+	width:100%;
+	height:35px;
+	bottom:0px;
+	background:black;
+	color:yellow;
+	text-transform:uppercase;
+	letter-spacing:5px;
+}

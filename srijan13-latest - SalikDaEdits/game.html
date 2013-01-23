@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!--<script language="Javascript" type="text/javascript" src="js/misc.js"></script>-->
+	<link rel="Stylesheet" type="text/css" href="style/main.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/demo.css" />
+	<link rel="stylesheet" type="text/css" href="style/custom.css" />
+	<link rel="stylesheet" type="text/css" href="style/event.css" />
+	<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	<script src="js/rotate.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="style/game.css" />
+	<title>game_test</title>
+	
+</head>
+
+<body><!--<script type="text/javascript" src="http://ui.sidepage.co/3/ui.prod.old.js"></script>-->
+
+<div id="console">
+	<div id="game_info">
+		Welcome to our game page! <br/>
+		Play your buttons right and register<br/>
+		for the games you like!<br/>
+	</div>
+	<div id="nfs" onclick="Nfs()">nfs</div>
+	<div id="fifa" onclick="Fifa()">fifa</div>
+	<div id="cs" onclick="Cs()">cs</div>
+	<div id="sf" onclick="Sf()">sf</div>
+	<div id="backg" onclick="BackG()">back</div>
+	<div id="homeg" onclick="HomeG()">home</div>
+</div>
+
+<script>
+
+	function HomeG(){
+		document.getElementById("game_info").innerHTML = "Do check our other events!";
+		jQuery("#homeg").animate( {top : "+=2.5px",}, 500);
+		jQuery("#homeg").animate( {top : "-=2.5px",}, 500);
+		setTimeout( function(){ window.location = "index.html"; }, 1500 );
+	}
+	function BackG(){
+		document.getElementById("game_info").innerHTML = "going back!";
+		jQuery("#backg").animate( {top : "+=2.5px",}, 500);
+		jQuery("#backg").animate( {top : "-=2.5px",}, 500);
+		setTimeout( function(){ window.location = "main.html"; }, 1500 );
+	}
+	function Sf(){
+		document.getElementById("game_info").innerHTML = "Street Fighter game info";
+		jQuery("#sf").animate( {top : "+=2px",}, 500);
+		jQuery("#sf").animate( {top : "-=2px",}, 500);
+		//$('#game_info').css({"background":"url('../images/7.jpg')"});
+	}
+	function Cs(){
+		document.getElementById("game_info").innerHTML = "Counter Strike game info";
+		jQuery("#cs").animate( {top : "+=2px",}, 500);
+		jQuery("#cs").animate( {top : "-=2px",}, 500);
+		//$('#game_info').css({"background":"url('../images/6.jpg')"});
+	}
+	function Fifa(){
+		document.getElementById("game_info").innerHTML = "Fifa game info";
+		jQuery("#fifa").animate( {top : "+=2px",}, 500);
+		jQuery("#fifa").animate( {top : "-=2px",}, 500);
+		//jQuery("#game_info").animate(
+		//{document.getElementById("game_info").style.background-image=url('../images/4.jpg');},
+		//500);
+	}
+	function Nfs(){
+		document.getElementById("game_info").innerHTML = "Need For Speed game info";
+		jQuery("#nfs").animate( {top : "+=2px",}, 500);
+		jQuery("#nfs").animate( {top : "-=2px",}, 500);
+		//images/games 2.jpg
+		//$('#game_info').css({"background":"url('../images/2.jpg')"});
+	}
+</script>
+
+<div id="copyright">best viewed in chrome<br>developed by arnaj  ,  avinaba  ,  pratyay  ,  sailik</br></div>
+</body>
+
+</html>
